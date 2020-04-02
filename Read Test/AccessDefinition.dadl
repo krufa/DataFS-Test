@@ -1,0 +1,27 @@
+
+// Definitionen von Daten-Zugriffsklassen
+
+#import <_data\Schema.bdtd>
+
+object ITestRoot
+{
+    TestRoot
+    {
+        RootName            [ get, set ];
+        AllObjects          [ get, set ];
+    }
+
+    create(ITestObject); open(ITestObject);
+};
+
+create (ITestRoot);
+open(ITestRoot);
+
+object ITestObject
+{
+    TestObject
+    {
+        Text                [ get, set ];
+        Number              [ get, set ];
+    }
+};
